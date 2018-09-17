@@ -27,7 +27,7 @@ export class ErrorInterceptor implements HttpInterceptor {
             switch(errorObj.status) {
                 case 401: this.handle401(); break;
                 case 403: this.handle403(); break;
-                default: this.handleDefault(errorObj); break;
+                default: this.handleDefault(errorObj);
             }
 
             return Observable.throw(error);
